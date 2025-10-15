@@ -1,0 +1,207 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff5f0;
+  color: #3a1b1b;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  padding-bottom: 70px;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #d85f4f;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 10px;
+  font-size: 0.95rem;
+}
+
+.logo-text {
+  margin: 3px 0;
+  font-size: 1.1rem;
+}
+
+.top-nav nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.animated-welcome {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1877F2;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: slideMsg 13s linear infinite;
+  margin: 3px 0;
+}
+
+@keyframes slideMsg {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.signature {
+  font-style: italic;
+  color: #1877F2;
+  margin: 3px 0;
+  font-size: 0.95rem;
+}
+
+/* Barre de recherche fixe */
+.top-bar {
+  position: fixed;
+  top: 56px; /* hauteur du header, ajuste si nécessaire */
+  left: 0;
+  right: 0;
+  background: #ff9966;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 1rem;
+  z-index: 20;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.top-bar {
+  position: fixed;
+  top: 90px; /* ajusté */
+  ...
+}
+
+
+.top-bar input {
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  border: none;
+  min-width: 180px;
+  font-size: 0.95rem;
+}
+
+.top-bar button {
+  border: none;
+  border-radius: 20px;
+  padding: 0.45rem 0.8rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.top-bar button:hover {
+  opacity: 0.9;
+}
+
+/* Contenu repoussé sous header + top-bar fixe */
+main {
+  padding-top: 174px; /* exemple: 90 + 84 (hauteur top-bar) */
+}
+
+
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  max-width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.card h3 {
+  margin: 6px 0 4px;
+  font-size: 1rem;
+}
+
+.card .price {
+  color: #b12704;
+  font-weight: 700;
+  margin: 4px 0 8px;
+  font-size: 1.05rem;
+}
+
+.card a {
+  align-self: flex-start;
+  background: #ff9900;
+  color: #111;
+  text-decoration: none;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #d85f4f;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 8px 12px;
+  z-index: 10;
+}
+
+footer .socials {
+  display: flex;
+  gap: 14px;
+  font-size: 1.3rem;
+}
+
+#petit-logo {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  width: 50px;
+  height: 35px;
+  z-index: 11;
+}
+
+.toast {
+  position: fixed;
+  top: 160px;
+  margin: 0 auto 12px auto;
+  width: max-content;
+  background: #0a7d32;
+  color: #fff;
+  padding: 0.4rem 0.7rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 20;
+}
+
+[hidden] {
+  display: none !important;
+}
