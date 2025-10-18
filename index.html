@@ -1,67 +1,70 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ma Boutique Express</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ma Boutique Express</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="header">
-    <div class="top-nav">
-      <h1 class="logo-text">Ma Boutique Express</h1>
-      <nav>
-        <a href="#">Accueil</a>
-        <a href="#">Amazon</a>
-        <a href="#">Contact</a>
-      </nav>
-    </div>
-    <p class="animated-welcome">BIENVENUE DANS LA BOUTIQUE DE LANDRY DE PIERRE</p>
-    <p class="signature">L.P Signature</p>
-  </header>
+  <header class="header">
+    <div class="top-nav">
+      <h1 class="logo-text">Ma Boutique Express</h1>
+      <nav>
+        <a href="#">Accueil</a>
+                <a href="https://www.amazon.fr/?tag=affiliationla0eb-20" target="_blank" rel="noopener noreferrer">Amazon</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+    <p class="animated-welcome">BIENVENUE DANS LA BOUTIQUE DE LANDRY DE PIERRE</p>
+    <p class="signature">L.P Signature</p>
+  </header>
 
-  <div class="top-bar">
-    <div>Produits disponibles : <span id="product-count">0</span></div>
-    <div class="actions">
-      <input type="search" id="search-input" placeholder="Rechercher un produit..." />
-      <button id="refresh-btn" title="Recharger la liste des produits">Rafraîchir produits</button>
-    </div>
-  </div>
+  <div class="top-bar">
+    <div>Produits disponibles : <span id="product-count">0</span></div>
+    <div class="actions">
+      <input type="search" id="search-input" placeholder="Rechercher un produit..." />
+      <button id="refresh-btn" title="Recharger la liste des produits">Rafraîchir produits</button>
+    </div>
+  </div>
 
-  <main>
-    <div id="toast" role="status" aria-live="polite" class="toast" hidden>Produits rechargés ✅</div>
-    <section class="products-grid" id="grid"></section>
-  </main>
+  <main>
+    <div id="toast" role="status" aria-live="polite" class="toast" hidden>Produits rechargés ✅</div>
+    <section class="products-grid" id="grid"></section>
+  </main>
 
-  <footer>
-    <div class="socials">
-      <a href="https://facebook.com" target="_blank" aria-label="Facebook">📘</a>
-      <a href="https://instagram.com" target="_blank" aria-label="Instagram">📸</a>
-      <a href="https://tiktok.com" target="_blank" aria-label="TikTok">🎵</a>
-      <a href="https://youtube.com" target="_blank" aria-label="YouTube">▶️</a>
-    </div>
-    <p>© 2025 Ma Boutique Express</p>
-  </footer>
+  <footer>
+    <div class="socials">
+      <a href="https://facebook.com" target="_blank" aria-label="Facebook">📘</a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram">📸</a>
+      <a href="https://tiktok.com" target="_blank" aria-label="TikTok">🎵</a>
+      <a href="https://youtube.com" target="_blank" aria-label="YouTube">▶️</a>
+    </div>
+        <p class="disclaimer" style="font-size: 0.8em; margin-top: 10px;">
+      En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.
+    </p>
+    <p>© 2025 Ma Boutique Express</p>
+  </footer>
 
-  <div id="petit-logo" aria-label="Petit logo M&T G">
-    <svg width="60" height="40" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo M&T G">
-      <rect width="100" height="60" fill="yellow" rx="10" ry="10"/>
-      <text x="15" y="40" font-family="Arial, sans-serif" font-size="40" fill="blue" font-weight="bold">M&amp;T</text>
-      <text x="68" y="58" font-family="Arial, sans-serif" font-size="20" fill="blue" font-weight="bold">G</text>
-    </svg>
-  </div>
+  <div id="petit-logo" aria-label="Petit logo M&T G">
+    <svg width="60" height="40" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo M&T G">
+      <rect width="100" height="60" fill="yellow" rx="10" ry="10"/>
+      <text x="15" y="40" font-family="Arial, sans-serif" font-size="40" fill="blue" font-weight="bold">M&amp;T</text>
+      <text x="68" y="58" font-family="Arial, sans-serif" font-size="20" fill="blue" font-weight="bold">G</text>
+    </svg>
+  </div>
 
-  <script src="script.js"></script>
+  <script src="script.js"></script>
 
-  <button id="back-to-top" title="Haut de page" style="position:fixed;bottom:80px;right:20px;background:#d85f4f;color:white;border:none;border-radius:50%;width:40px;height:40px;font-size:18px;cursor:pointer;opacity:0;transition:opacity 0.3s;display:none;">↑</button>
-  <script>
-    const backToTop = document.getElementById('back-to-top');
-    window.addEventListener('scroll', () => {
-      backToTop.style.display = window.scrollY > 400 ? 'block' : 'none';
-      backToTop.style.opacity = window.scrollY > 400 ? '1' : '0';
-    });
-    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-  </script>
+  <button id="back-to-top" title="Haut de page" style="position:fixed;bottom:80px;right:20px;background:#d85f4f;color:white;border:none;border-radius:50%;width:40px;height:40px;font-size:18px;cursor:pointer;opacity:0;transition:opacity 0.3s;display:none;">↑</button>
+  <script>
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      backToTop.style.display = window.scrollY > 400 ? 'block' : 'none';
+      backToTop.style.opacity = window.scrollY > 400 ? '1' : '0';
+    });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
 </body>
 </html>
