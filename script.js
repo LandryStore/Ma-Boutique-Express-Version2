@@ -68,51 +68,35 @@ function renderProducts(list) {
   }
 
   list.forEach(p => {
-    // Valeurs par défaut sécurisées
     const name = p.name || 'Produit sans nom';
     const image = p.image?.trim() || '';
     const price = p.price || '';
-    list.forEach((grand) => {
-  const card = document.createElement("div");
-  card.className = "card";
-
-  const name = document.createElement("h4");
-  name.innerText = grand.name;
-
-  const img = document.createElement("img");
-  img.src = grand.image;
-
-  const prix = document.createElement("p");
-  prix.innerText = `${grand.prix}€`;
-
-  // 👉 AJOUTE CE BLOC JUSTE APRÈS
-  const bouton = document.createElement("a");
-  bouton.href = grand.link;
-  bouton.innerText = "Voir sur Amazon";
-  bouton.target = "_blank";
-  bouton.rel = "noopener noreferrer";
-  bouton.className = "amazon-button";
-
-  // Ajoute les éléments dans la carte
-  card.appendChild(name);
-  card.appendChild(img);
-  card.appendChild(prix);
-  card.appendChild(bouton);
-
-  // Ajoute la carte dans le lien ou dans la grille
-  grid.appendChild(card); // ou link.appendChild(card) selon ta structure
-});
-
     const link = p.link?.trim() || '#';
 
     const card = document.createElement('div');
     card.className = 'card';
-    card.innerHTML = `
-      ${image ? `<img src="${image}" alt="${name}" onerror="this.style.display='none'">` : ''}
-      <h3>${escapeHtml(name)}</h3>
-      <p class="price">${escapeHtml(price)}</p>
-      <a href="${link}" target="_blank" rel="noopener noreferrer">Voir sur Amazon</a>
-    `;
+
+    const nameEl = document.createElement('h4');
+    nameEl.innerText = name;
+
+    const img = document.createElement('img');
+    img.src = image;
+
+    const prixEl = document.createElement('p');
+    prixEl.innerText = `${price}€`;
+
+    const bouton = document.createElement('a');
+    bouton.href = link;
+    bouton.innerText = 'Voir sur Amazon';
+    bouton.target = '_blank';
+    bouton.rel = 'noopener noreferrer';
+    bouton.className = 'amazon-button';
+
+    card.appendChild(nameEl);
+    card.appendChild(img);
+    card.appendChild(prixEl);
+    card.appendChild(bouton);
+
     grid.appendChild(card);
   });
 }
@@ -145,17 +129,6 @@ function showToast(message) {
   toast._timeout = setTimeout(() => {
     toast.hidden = true;
   }, 3000);
-}
-
-// === ÉCHAPPEMENT HTML (sécurité) ===
-function escapeHtml(str) {
-  if (typeof str !== 'string') return str;
-  return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '<')
-    .replace(/>/g, '>')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#039;');
 }
 
 // === INITIALISATION ===

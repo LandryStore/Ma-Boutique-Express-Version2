@@ -216,3 +216,14 @@ footer .socials {
   display: inline-block;
   margin-top: 6px;
 }
+.amazon-button {
+  background: #ff9900;
+  color: #111;
+  text-decoration: none;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: inline-block;
+  margin-top: 6px;
+}
