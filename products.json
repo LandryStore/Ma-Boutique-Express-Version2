@@ -2983,10 +2983,9 @@
   },
   {
   "name": "Caméra de tableau de bord BOOGIIO OK-831",
-  "description": "Caméra Full HD 1080p, écran IPS 3\", grand angle 170°, capteur G, vision nocturne WDR, enregistrement en boucle, moniteur de stationnement. Inclus : carte SD 32 Go, chargeur voiture, support ventouse.",
   "price": "37,99$",
   "image": "https://m.media-amazon.com/images/I/71twfO-FCoL._AC_SY300_SX300_QL70_ML2_.jpg",
-  "url": "https://amzn.to/4ooPnp7",
+  "link": "https://amzn.to/4ooPnp7",
   "searchQuery": "BOOGIIO OK-831 dash cam 1080p 32GB"
 },
 ]
